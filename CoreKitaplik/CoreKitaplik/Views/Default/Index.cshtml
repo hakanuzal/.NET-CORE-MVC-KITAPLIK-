@@ -1,0 +1,24 @@
+﻿@model List<CoreKitaplik.Models.Kitaplar>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KİTAP ADI</th>
+        <th>YAZAR</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+<tr>
+    <td>@k.ID</td>
+    <td>@k.Name</td>
+    <td>@k.Author</td>
+</tr>
+    }
+
+</table>
